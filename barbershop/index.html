@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maple &amp; Main Barbershop Sample | QuickFront Booking Site</title>
+<meta name="description" content="Sample barbershop website with services, prices and Call/Text/Book. Built by QuickFront for local shops that want more appointments.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Maple &amp; Main Barbershop Sample | QuickFront Booking Site">
+<meta property="og:description" content="Sample barbershop website with services, prices and Call/Text/Book. Built by QuickFront for local shops that want more appointments.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maple &amp; Main Barbershop Sample | QuickFront Booking Site">
+<meta name="twitter:description" content="Sample barbershop website with services, prices and Call/Text/Book. Built by QuickFront for local shops that want more appointments.">
+<style>
+:root{--ink:#16181d;--ink2:#2a2e37;--paper:#faf7f2;--card:#fff;--muted:#6a6f7a;--accent:#c8472d;--accent-d:#a33822;--line:#e7e1d6;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.2rem,8vw,4rem);font-weight:800}
+h2{font-size:clamp(1.6rem,5vw,2.3rem);font-weight:800}
+h3{font-size:1.1rem}
+p{margin:0 0 1em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:0 22px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-d)}
+.btn-ghost{border-color:#fff;color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--ink);color:#fff}
+header.top{position:sticky;top:0;z-index:20;background:rgba(22,24,29,.96);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:12px}
+.logo{font-weight:800;font-size:1.1rem;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--accent)}
+.top nav{display:none;gap:22px}
+.top nav a{text-decoration:none;font-size:.95rem;opacity:.85}
+.top nav a:hover{opacity:1}
+.top .btn{min-height:40px;padding:0 16px;font-size:.92rem}
+@media(min-width:760px){.top nav{display:flex}}
+.hero{background:linear-gradient(160deg,#16181d 0%,#2a2e37 60%,#3b2a26 100%);color:#fff;padding:56px 0 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(200,71,45,.35),transparent 70%)}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#f1b3a4;margin-bottom:14px}
+.hero p.lead{font-size:1.12rem;max-width:34em;color:#d9dce2}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.cta-row .btn{flex:1 1 150px;white-space:nowrap}
+@media(max-width:599px){.cta-row .btn:first-child{flex-basis:100%}}
+@media(min-width:600px){.cta-row .btn{flex:0 0 auto}}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:.92rem;color:#c9ccd3;padding:0;list-style:none}
+section{padding:60px 0}
+section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sub{color:var(--muted);max-width:36em}
+.grid{display:grid;gap:14px;margin-top:26px}
+@media(min-width:700px){.grid.cols2{grid-template-columns:1fr 1fr}.grid.cols3{grid-template-columns:repeat(3,1fr)}}
+.price-list{list-style:none;margin:26px 0 0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.price-list li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.price-list li:last-child{border-bottom:0}
+.price-list b{font-size:1.05rem}
+.price-list small{display:block;color:var(--muted);font-size:.9rem;font-weight:400}
+.price{font-weight:800;font-size:1.2rem;white-space:nowrap;color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.hours{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.hours td{padding:13px 18px;border-bottom:1px solid var(--line)}
+.hours tr:last-child td{border-bottom:0}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today{background:#fff3ef}
+.badge-sample{display:inline-block;background:#fff3cd;color:#7a5b00;border:1px solid #f0d98a;border-radius:6px;padding:3px 9px;font-size:.78rem;font-weight:700;margin-bottom:14px}
+.stars{color:#e0a100;letter-spacing:2px}
+.review p{margin-bottom:.6em}
+.review small{color:var(--muted)}
+form{display:grid;gap:14px;margin-top:22px}
+.row2{display:grid;gap:14px}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+input,select,textarea{width:100%;min-height:48px;padding:11px 14px;font:inherit;border:1.5px solid #cfc8ba;border-radius:10px;background:#fff;color:var(--ink)}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(200,71,45,.3);border-color:var(--accent)}
+.form-ok{display:none;background:#e7f6ec;border:1px solid #9bd3ae;color:#16502a;padding:16px;border-radius:10px;font-weight:600}
+.form-note{font-size:.85rem;color:var(--muted);margin:0}
+.contact-grid{display:grid;gap:30px}
+@media(min-width:860px){.contact-grid{grid-template-columns:1.1fr .9fr;align-items:start}}
+.contact-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.contact-list a{font-weight:700}
+.map{margin-top:18px;border-radius:var(--r);background:repeating-linear-gradient(45deg,#ece6da,#ece6da 12px,#f3eee4 12px,#f3eee4 24px);border:1px solid var(--line);height:150px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;text-align:center;padding:10px}
+footer{background:var(--ink);color:#b9bdc6;padding:34px 0 100px;font-size:.92rem}
+footer strong{color:#fff}
+.sample-tag{display:inline-block;margin-top:10px;padding:5px 12px;border:1px dashed #6d7380;border-radius:999px;color:#fff;font-weight:700;font-size:.85rem}
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+.sticky-bar .btn{flex:1;min-height:46px;padding:0 8px;font-size:.95rem}
+@media(min-width:760px){.sticky-bar{display:none}footer{padding-bottom:34px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Maple <span>&amp;</span> Main</a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#hours">Hours</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Neighborhood barbershop · Walk-ins welcome</span>
+    <h1>Sharp cuts.<br>Easy booking.</h1>
+    <p class="lead">Fades, tapers, beard trims and kids' cuts from barbers who take their time. Pick a slot in under a minute — or just call or text.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#book">Request a booking</a>
+      <a class="btn btn-ghost" href="tel:+15555550142">Call (555) 555-0142</a>
+      <a class="btn btn-ghost" href="sms:+15555550142?body=Hi%2C%20I%27d%20like%20to%20book%20a%20cut">Text us</a>
+    </div>
+    <ul class="facts">
+      <li>★ 4.9 average (sample)</li><li>Open 6 days</li><li>Cash &amp; cards</li>
+    </ul>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Services &amp; prices</h2>
+    <p class="sub">Simple, upfront pricing. No surprises at the register.</p>
+    <ul class="price-list">
+      <li><div><b>Classic haircut</b><small>Scissors or clippers, hot towel finish · 30 min</small></div><span class="price">$35</span></li>
+      <li><div><b>Skin fade / taper</b><small>Detailed blend and line-up · 40 min</small></div><span class="price">$40</span></li>
+      <li><div><b>Beard trim &amp; shape</b><small>Razor edge, hot towel · 20 min</small></div><span class="price">$20</span></li>
+      <li><div><b>Cut + beard combo</b><small>Our most popular · 55 min</small></div><span class="price">$55</span></li>
+      <li><div><b>Kids cut (12 &amp; under)</b><small>Patient, quick, parent-approved · 25 min</small></div><span class="price">$25</span></li>
+      <li><div><b>Senior cut (65+)</b><small>Tuesday–Thursday · 30 min</small></div><span class="price">$28</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt" id="hours">
+  <div class="wrap">
+    <h2>Hours</h2>
+    <p class="sub">Walk-ins are first come, first served. Booking guarantees your chair.</p>
+    <div class="grid cols2">
+      <table class="hours" aria-label="Opening hours">
+        <tr><td>Monday</td><td>Closed</td></tr>
+        <tr><td>Tuesday</td><td>9:00 am – 7:00 pm</td></tr>
+        <tr><td>Wednesday</td><td>9:00 am – 7:00 pm</td></tr>
+        <tr><td>Thursday</td><td>9:00 am – 8:00 pm</td></tr>
+        <tr><td>Friday</td><td>9:00 am – 8:00 pm</td></tr>
+        <tr><td>Saturday</td><td>8:00 am – 6:00 pm</td></tr>
+        <tr><td>Sunday</td><td>10:00 am – 3:00 pm</td></tr>
+      </table>
+      <div class="card">
+        <h3>Before you come</h3>
+        <p>Running late? Text us and we'll hold your spot for 10 minutes.</p>
+        <p>Cancel or reschedule up to 2 hours ahead by call or text — no fee.</p>
+        <a class="btn btn-dark" href="sms:+15555550142?body=Running%20late">Text us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="badge-sample">SAMPLE REVIEWS — placeholder text, not real customers</span>
+    <h2>What customers say</h2>
+    <p class="sub">This section shows where real Google reviews would appear once the shop is live.</p>
+    <div class="grid cols3">
+      <div class="card review"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Sample review text: Clean fade, on time, and easy to book from my phone."</p><small>— Sample customer</small></div>
+      <div class="card review"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Sample review text: Great with my son. We'll be back every month."</p><small>— Sample customer</small></div>
+      <div class="card review"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Sample review text: Best beard trim in the neighborhood."</p><small>— Sample customer</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="book">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Request a booking</h2>
+      <p class="sub">Tell us what you need and when. We'll confirm by text within a few hours.</p>
+      <form id="bookform" novalidate>
+        <div class="row2">
+          <div><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Alex Rivera"></div>
+          <div><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(555) 555-0100"></div>
+        </div>
+        <div><label for="service">Service</label>
+          <select id="service" name="service">
+            <option>Classic haircut — $35</option><option>Skin fade / taper — $40</option><option>Beard trim &amp; shape — $20</option><option>Cut + beard combo — $55</option><option>Kids cut — $25</option><option>Senior cut — $28</option>
+          </select></div>
+        <div class="row2">
+          <div><label for="date">Preferred date</label><input id="date" name="date" type="date" required></div>
+          <div><label for="time">Preferred time</label>
+            <select id="time" name="time"><option>Morning (9–12)</option><option>Afternoon (12–4)</option><option>Evening (4–8)</option></select></div>
+        </div>
+        <div><label for="notes">Anything we should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label><textarea id="notes" name="notes" placeholder="Preferred barber, reference photo, etc."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send booking request</button>
+        <p class="form-note">Sample form: nothing is sent from this demo page.</p>
+        <div class="form-ok" id="ok" role="status">Thanks! Your request was received (demo). On the live site, you'd get a confirmation text shortly.</div>
+      </form>
+    </div>
+    <div class="card" id="contact">
+      <h2 style="font-size:1.5rem">Find us</h2>
+      <ul class="contact-list">
+        <li>📍 <span>128 Maple Street, Anytown, USA 00000<br><small style="color:var(--muted)">(fictional address)</small></span></li>
+        <li>📞 <a href="tel:+15555550142">(555) 555-0142</a></li>
+        <li>💬 <a href="sms:+15555550142">Text (555) 555-0142</a></li>
+        <li>✉️ <a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+      <div class="map">Map placeholder — live site embeds Google Maps</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Maple &amp; Main Barbershop</strong> · 128 Maple Street · (555) 555-0142</p>
+    <p>© 2026 Maple &amp; Main (fictional business).</p>
+    <span class="sample-tag">Sample design · by QuickFront</span>
+  </div>
+</footer>
+
+<nav class="sticky-bar" aria-label="Quick actions">
+  <a class="btn btn-dark" href="tel:+15555550142">Call</a>
+  <a class="btn btn-dark" href="sms:+15555550142">Text</a>
+  <a class="btn btn-primary" href="#book">Book</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.getElementById('date');
+  if(d){var t=new Date();d.min=t.toISOString().slice(0,10);}
+  var f=document.getElementById('bookform'),ok=document.getElementById('ok');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=f.name.value.trim(),p=f.phone.value.trim();
+    if(!n||!p||!f.date.value){alert('Please add your name, phone and a date.');return;}
+    ok.style.display='block';f.reset();ok.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+})();
+</script>
+</body>
+</html>

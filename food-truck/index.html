@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sol Y Fuego Food Truck Sample | QuickFront Catering Site</title>
+<meta name="description" content="Sample taco truck website with menu, schedule and catering quote form. Built by QuickFront for local food businesses.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sol Y Fuego Food Truck Sample | QuickFront Catering Site">
+<meta property="og:description" content="Sample taco truck website with menu, schedule and catering quote form. Built by QuickFront for local food businesses.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sol Y Fuego Food Truck Sample | QuickFront Catering Site">
+<meta name="twitter:description" content="Sample taco truck website with menu, schedule and catering quote form. Built by QuickFront for local food businesses.">
+<style>
+:root{--ink:#1d1a17;--cream:#fff8ec;--card:#fff;--muted:#74695c;--orange:#e8590c;--orange-d:#c44a07;--teal:#0f766e;--yellow:#ffc233;--line:#f0e2c8;--r:16px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.1;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,9vw,4.4rem);font-weight:900}
+h2{font-size:clamp(1.7rem,5.5vw,2.4rem);font-weight:900}
+h3{font-size:1.15rem}
+p{margin:0 0 1em}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:12px;font-weight:800;font-size:1rem;text-decoration:none;border:2.5px solid var(--ink);cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s;box-shadow:3px 3px 0 var(--ink)}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-yellow{background:var(--yellow);color:var(--ink)}
+.btn-white{background:#fff;color:var(--ink)}
+header.top{position:sticky;top:0;z-index:20;background:var(--yellow);border-bottom:3px solid var(--ink)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:12px}
+.logo{font-weight:900;font-size:1.15rem;text-decoration:none}
+.top nav{display:none;gap:22px;font-weight:700}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+.top .btn{min-height:42px;padding:0 16px;font-size:.92rem}
+@media(min-width:780px){.top nav{display:flex}}
+.hero{background:var(--teal);color:#fff;padding:54px 0 70px;border-bottom:3px solid var(--ink);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-60px;bottom:-90px;width:300px;height:300px;border-radius:50%;background:var(--orange);opacity:.9;border:3px solid var(--ink)}
+.hero .wrap{position:relative;z-index:1}
+.tag{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;font-size:.82rem;padding:6px 12px;border-radius:999px;border:2px solid var(--ink);margin-bottom:16px}
+.hero p.lead{font-size:1.15rem;max-width:32em}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.cta-row .btn{flex:1 1 150px;white-space:nowrap}
+@media(min-width:620px){.cta-row .btn{flex:0 0 auto}}
+section{padding:60px 0}
+section.band{background:#fff;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.sub{color:var(--muted);max-width:36em}
+.grid{display:grid;gap:16px;margin-top:26px}
+@media(min-width:700px){.grid.cols2{grid-template-columns:1fr 1fr}.grid.cols3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:2.5px solid var(--ink);border-radius:var(--r);padding:22px;box-shadow:4px 4px 0 var(--ink)}
+.card .price{display:block;font-size:1.9rem;font-weight:900;color:var(--orange);margin:6px 0 10px}
+.card ul{padding-left:1.15em;margin:0 0 12px}
+.card li{margin-bottom:4px}
+.card.pop{background:#fff2c4}
+.menu{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:0;background:#fff;border:2.5px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.menu li{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;border-bottom:2px dashed var(--line)}
+.menu li:last-child{border-bottom:0}
+.menu small{display:block;color:var(--muted)}
+.menu .p{font-weight:900;color:var(--orange);white-space:nowrap}
+.hours{width:100%;border-collapse:collapse;background:#fff;border:2.5px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.hours td{padding:13px 18px;border-bottom:2px dashed var(--line)}
+.hours tr:last-child td{border-bottom:0}
+.hours td:last-child{text-align:right;font-weight:700}
+.badge-sample{display:inline-block;background:#fff3cd;color:#7a5b00;border:2px solid #e8c766;border-radius:8px;padding:4px 10px;font-size:.78rem;font-weight:800;margin-bottom:14px}
+.stars{color:#e0a100;letter-spacing:2px}
+form{display:grid;gap:14px;margin-top:22px}
+.row2{display:grid;gap:14px}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:700;font-size:.92rem;margin-bottom:6px}
+input,select,textarea{width:100%;min-height:50px;padding:11px 14px;font:inherit;border:2.5px solid var(--ink);border-radius:10px;background:#fff;color:var(--ink)}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(232,89,12,.4)}
+.form-ok{display:none;background:#d9f5e3;border:2.5px solid #1c7a40;color:#0f4a25;padding:16px;border-radius:10px;font-weight:700}
+.form-note{font-size:.85rem;color:var(--muted);margin:0}
+.contact-grid{display:grid;gap:30px}
+@media(min-width:860px){.contact-grid{grid-template-columns:1.1fr .9fr;align-items:start}}
+.contact-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.contact-list a{font-weight:800}
+footer{background:var(--ink);color:#d8cfc0;padding:34px 0 110px;font-size:.92rem}
+footer strong{color:#fff}
+.sample-tag{display:inline-block;margin-top:10px;padding:5px 12px;border:2px dashed #8b8174;border-radius:999px;color:#fff;font-weight:800;font-size:.85rem}
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--yellow);border-top:3px solid var(--ink)}
+.sticky-bar .btn{flex:1;min-height:46px;padding:0 8px;font-size:.95rem;box-shadow:2px 2px 0 var(--ink)}
+@media(min-width:780px){.sticky-bar{display:none}footer{padding-bottom:34px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">🌮 Sol Y Fuego</a>
+    <nav aria-label="Main"><a href="#menu">Menu</a><a href="#packages">Catering</a><a href="#hours">Where &amp; when</a><a href="#reviews">Reviews</a></nav>
+    <a class="btn btn-orange" href="#book">Book catering</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Taco truck · Events · Office lunches</span>
+    <h1>Fresh tacos,<br>rolled up to you.</h1>
+    <p class="lead">Birthdays, weddings, office lunches and block parties. Tell us your date and headcount — we'll send a quote the same day.</p>
+    <div class="cta-row">
+      <a class="btn btn-yellow" href="#book">Get a catering quote</a>
+      <a class="btn btn-white" href="tel:+15555550177">Call (555) 555-0177</a>
+      <a class="btn btn-white" href="sms:+15555550177?body=Hi%2C%20I%20need%20catering%20for%20an%20event">Text us</a>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>Menu favorites</h2>
+    <p class="sub">Everything is made fresh on the truck. Vegetarian and gluten-free options available.</p>
+    <ul class="menu">
+      <li><div><b>Street tacos (3)</b><small>Carne asada, al pastor, chicken tinga, or veggie</small></div><span class="p">$12</span></li>
+      <li><div><b>Loaded burrito</b><small>Rice, beans, your protein, salsa, crema</small></div><span class="p">$13</span></li>
+      <li><div><b>Quesadilla</b><small>Oaxaca cheese, griddled crisp</small></div><span class="p">$10</span></li>
+      <li><div><b>Elote cup</b><small>Street corn, cotija, chili-lime</small></div><span class="p">$5</span></li>
+      <li><div><b>Horchata / Jamaica</b><small>House-made, 16 oz</small></div><span class="p">$4</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="packages">
+  <div class="wrap">
+    <h2>Catering packages</h2>
+    <p class="sub">Truck pulls up, serves, cleans up. Pricing is per guest (sample pricing).</p>
+    <div class="grid cols3">
+      <div class="card"><h3>Office Lunch</h3><span class="price">$14 <small style="font-size:.9rem;color:var(--muted)">/ guest</small></span><ul><li>20–50 guests</li><li>2 proteins, sides, salsa bar</li><li>90-minute service</li></ul><a class="btn btn-white" href="#book">Ask about this</a></div>
+      <div class="card pop"><h3>Party Fiesta ★</h3><span class="price">$18 <small style="font-size:.9rem;color:var(--muted)">/ guest</small></span><ul><li>40–120 guests</li><li>3 proteins, sides, drinks</li><li>2-hour service + staff</li></ul><a class="btn btn-orange" href="#book">Ask about this</a></div>
+      <div class="card"><h3>Wedding &amp; Big Events</h3><span class="price">Custom</span><ul><li>120+ guests</li><li>Full menu planning &amp; tasting</li><li>Multiple trucks available</li></ul><a class="btn btn-white" href="#book">Request quote</a></div>
+    </div>
+    <p class="form-note" style="margin-top:16px">Minimum $450 per event · travel fee applies beyond 25 miles.</p>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <h2>Where &amp; when</h2>
+    <p class="sub">Public stops are weekly. Private events are booked around them.</p>
+    <div class="grid cols2">
+      <table class="hours" aria-label="Weekly schedule">
+        <tr><td>Mon</td><td>Private events only</td></tr>
+        <tr><td>Tue</td><td>Downtown Plaza · 11am–2pm</td></tr>
+        <tr><td>Wed</td><td>Tech Park · 11:30am–2pm</td></tr>
+        <tr><td>Thu</td><td>Riverside Brewery · 5–9pm</td></tr>
+        <tr><td>Fri</td><td>Downtown Plaza · 11am–2pm</td></tr>
+        <tr><td>Sat</td><td>Farmers Market · 9am–2pm</td></tr>
+        <tr><td>Sun</td><td>Private events only</td></tr>
+      </table>
+      <div class="card"><h3>Booking an event?</h3><p>Dates fill 4–6 weeks ahead in spring and fall. Send your request early, and we'll hold your date with a small deposit.</p><a class="btn btn-orange" href="#book">Check my date</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="reviews">
+  <div class="wrap">
+    <span class="badge-sample">SAMPLE REVIEWS — placeholder text, not real customers</span>
+    <h2>Happy guests</h2>
+    <p class="sub">This is where real Google or Facebook reviews would be shown on a live site.</p>
+    <div class="grid cols3">
+      <div class="card"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Sample review: Showed up on time and fed our whole office."</p><small>— Sample customer</small></div>
+      <div class="card"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Sample review: Quote came back the same day. Easy to plan."</p><small>— Sample customer</small></div>
+      <div class="card"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Sample review: Guests are still talking about the al pastor."</p><small>— Sample customer</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Request a catering quote</h2>
+      <p class="sub">Takes about a minute. We reply by text or email, usually the same day.</p>
+      <form id="bookform" novalidate>
+        <div class="row2">
+          <div><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Jordan Lee"></div>
+          <div><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(555) 555-0100"></div>
+        </div>
+        <div class="row2">
+          <div><label for="date">Event date</label><input id="date" name="date" type="date" required></div>
+          <div><label for="guests">Guests</label><input id="guests" name="guests" type="number" min="10" inputmode="numeric" placeholder="e.g. 60"></div>
+        </div>
+        <div><label for="pkg">Package</label>
+          <select id="pkg" name="pkg"><option>Office Lunch — $14/guest</option><option>Party Fiesta — $18/guest</option><option>Wedding / big event — custom</option><option>Not sure yet</option></select></div>
+        <div><label for="notes">Location &amp; notes <span style="font-weight:400;color:var(--muted)">(optional)</span></label><textarea id="notes" name="notes" placeholder="Address or city, dietary needs, start time..."></textarea></div>
+        <button class="btn btn-orange" type="submit">Send quote request</button>
+        <p class="form-note">Sample form: nothing is sent from this demo page.</p>
+        <div class="form-ok" id="ok" role="status">Thanks! Your request was received (demo). On the live site, you'd get a quote the same day.</div>
+      </form>
+    </div>
+    <div class="card" id="contact">
+      <h2 style="font-size:1.5rem">Contact</h2>
+      <ul class="contact-list">
+        <li>📞 <a href="tel:+15555550177">(555) 555-0177</a></li>
+        <li>💬 <a href="sms:+15555550177">Text (555) 555-0177</a></li>
+        <li>✉️ <a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li>📍 <span>Serving Anytown &amp; 25 miles around<br><small style="color:var(--muted)">(fictional service area)</small></span></li>
+        <li>📸 <span>@solyfuegotacos <small style="color:var(--muted)">(fictional)</small></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Sol Y Fuego Taco Truck</strong> · (555) 555-0177</p>
+    <p>© 2026 Sol Y Fuego (fictional business).</p>
+    <span class="sample-tag">Sample design · by QuickFront</span>
+  </div>
+</footer>
+
+<nav class="sticky-bar" aria-label="Quick actions">
+  <a class="btn btn-white" href="tel:+15555550177">Call</a>
+  <a class="btn btn-white" href="sms:+15555550177">Text</a>
+  <a class="btn btn-orange" href="#book">Quote</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.getElementById('date');
+  if(d){d.min=new Date().toISOString().slice(0,10);}
+  var f=document.getElementById('bookform'),ok=document.getElementById('ok');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.name.value.trim()||!f.phone.value.trim()||!f.date.value){alert('Please add your name, phone and event date.');return;}
+    ok.style.display='block';f.reset();ok.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+})();
+</script>
+</body>
+</html>

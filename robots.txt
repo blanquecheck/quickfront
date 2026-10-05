@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blanquecheck.github.io/quickfront/sitemap.xml
